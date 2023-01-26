@@ -1,0 +1,17 @@
+@startuml
+actor Client as client
+artifact Event
+
+client *-- Event 
+
+actor Employee as employee
+
+
+employee -> (Register client to Event)
+employee -left-> (client update)
+employee -down-> (registration update)
+employee -down-> (client delete)
+employee -down-> (client register)
+
+
+@enduml
